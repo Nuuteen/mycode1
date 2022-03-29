@@ -29,3 +29,13 @@ function myshow() {
     function pass(){ document.getElementById('input-passwordz').type="password"; } 
     function text(){ document.getElementById('input-passwordz').type="text"; }
   }
+
+  // date thai format
+  const date  = new Date()
+  const thaiDate = date.toLocaleDateString("th-TH", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+});
+console.log('DATE > THAI', thaiDate)
+document.getElementById("date2").innerHTML = thaiDate;
